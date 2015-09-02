@@ -32,7 +32,7 @@ public class BinSearcher {
 	}
 	
 	private void setNewGuessedNumbers() {
-		this.middle = (this.left + this.right)/2;
+		this.middle = (int)((this.left + this.right)/2.0);
 		
 		if(isSectionRight()) {
 			this.right = this.middle;
@@ -47,7 +47,7 @@ public class BinSearcher {
 	}
 	
 	private void prompt() {
-		System.out.println(SearcherDefaultValues.SORT_QUESTION);
+		System.out.printf(SearcherDefaultValues.SORT_QUESTION, this.left, this.middle);
 	}
 	
 	private boolean isAccepted() {
