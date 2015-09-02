@@ -3,7 +3,7 @@
 This set of programs and scripts asks user some questions and guesses their number.
 
 ### C
-To run this C program, you need gcc and make. You can always compile it without make by using (in 'c' folder)
+To run this C program, you need gcc and make. Only after compiling you can run "binarysearch" program. You can always compile it without make by using
 ```sh
 $ gcc -o binarysearch code/make.c code/binsort.c
 ```
