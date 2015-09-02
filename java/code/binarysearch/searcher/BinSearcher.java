@@ -52,13 +52,13 @@ public class BinSearcher {
 	
 	private boolean isAccepted() {
 		Scanner in = new Scanner(System.in);
-		char answer = "\0";
+		char answer = '\0';
 		
-		while(!(answer == "y" || answer == "n")) {
+		while(!(answer == 'y' || answer == 'n')) {
 			answer = in.next(".").charAt(0);
 		}
 		
-		return (answer == "y")
+		return (answer == 'y');
 	}
 	
 	
