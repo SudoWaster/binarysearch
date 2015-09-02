@@ -7,12 +7,12 @@
 #define MAX_SECTION 1000
 #define MIN_SECTION 0
 
-extern const char* SORT_QUESTION;
-
 typedef void (*voidfunc_f)(void);
 
 typedef int boolean;
 enum { false, true };
+
+extern const char* SORT_QUESTION;
 
 typedef struct {
 	int left;
@@ -27,6 +27,9 @@ typedef struct {
 	void (*resetValues)();
 } binsort_t;
 
+//
+//  binsort.c
+//
 binsort_t *Binsort_Init(void);
 
 #endif
