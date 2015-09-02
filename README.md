@@ -32,3 +32,5 @@ License
 ----
 
 GNU General Public License v2.0. See [LICENSE](https://github.com/SudoWaster/binarysearch/blob/master/LICENSE) file.
+
+Feel free to distibute, change this source code or even learn from it!
