@@ -45,7 +45,7 @@ void binsort_t_guess(binsort_t *self) {
 	self->resetValues(self);
 	
 	while(self->isNotGuessed(self)) {
-		self->setNewNumbers(self);
+		self->setNewGuessedNumbers(self);
 	}
 }
 
@@ -75,18 +75,29 @@ boolean binsort_t_isNotGuessed(binsort_t *self) {
 /*
 ========================
   
-  binsort.setNewNumbers()
+  binsort.setNewGuessedNumbers()
   
 ========================
 */
-void binsort_t_setNewNumbers(binsort_t *self) {
-	self->middle = (self->left + self->right)/2;
+void binsort_t_setNewGuessedNumbers(binsort_t *self) {
+	self->middle = self->getMiddleValue(self);
 	
 	if(self->isSectionRight(self)) {
 		self->right = self->middle;
 	} else {
 		self->left = self->middle + 1;
 	}
+}
+
+/*
+========================
+  
+  binsort.getMiddleValue()
+  
+========================
+*/
+int binsort_t_getMiddleValue(binsort_t *self) {
+	return (self->left + self->right)/2;
 }
 
 /*
@@ -125,7 +136,8 @@ binsort_t *Binsort_Init(void) {
 	
 	binsort->prompt = binsort_t_prompt;
 	binsort->isSectionRight = binsort_t_isSectionRight;
-	binsort->setNewNumbers = binsort_t_setNewNumbers;
+	binsort->setNewGuessedNumbers = binsort_t_setNewGuessedNumbers;
+	binsort->getMiddleValue = binsort_t_getMiddleValue;
 	binsort->isNotGuessed = binsort_t_isNotGuessed;
 	binsort->guess = binsort_t_guess;
 	binsort->resetValues = binsort_t_resetValues;
