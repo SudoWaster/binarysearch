@@ -17,6 +17,8 @@ public class BinSearcher {
 		result = getGuessedValue();
 	}
 	
+	
+	
 	public int getGuessedValue() {
 		resetValues();
 		
@@ -27,18 +29,26 @@ public class BinSearcher {
 		return this.left;
 	}
 	
-	private boolean isNotGuessed() {
-		return (left < right);
-	}
-	
 	private void setNewGuessedNumbers() {
-		this.middle = (int)((this.left + this.right)/2.0);
+		this.middle = getMediumValue();
 		
 		if(isSectionRight()) {
 			this.right = this.middle;
 		} else {
 			this.left = this.middle + 1;
 		}
+	}
+	
+	
+	
+	
+	
+	private boolean isNotGuessed() {
+		return (left < right);
+	}
+	
+	private int getMediumValue() {
+		return (int)((this.left + this.right)/2.0);
 	}
 	
 	private boolean isSectionRight() {
