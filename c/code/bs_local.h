@@ -21,7 +21,8 @@ typedef struct {
 	
 	boolean (*isSectionRight)();
 	void (*prompt)();
-	void (*setNewNumbers)();
+	void (*setNewGuessedNumbers)();
+	int (*getMiddleValue)();
 	boolean (*isNotGuessed)();
 	void (*guess)();
 	void (*resetValues)();
